@@ -52,7 +52,7 @@ refs.userForm.addEventListener('input', onHandleChange);
 refs.userForm.addEventListener('submit', onHandleSubmit);
 refs.usersList.addEventListener('click', onHandleDelete);
 
-refs.taskForm.addEventListener('change', task.onHandleChange);
+refs.taskForm.addEventListener('input', task.onHandleChange);
 refs.taskForm.addEventListener('submit', task.onHandleSubmit);
 refs.tasksList.addEventListener('click', task.onHandleDelete);
 
