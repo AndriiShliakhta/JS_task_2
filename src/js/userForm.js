@@ -2,12 +2,14 @@ import { data } from './data';
 import { v4 as uuidv4 } from 'uuid';
 import template from '../tamplates/users/item.hbs';
 import taskTemplate from '../tamplates/users/list.hbs';
+import * as task from './taskForm';
 
-const refs = {
+export const refs = {
   userForm: document.forms.userForm,
   name: document.forms.userForm.elements.usersName,
   email: document.forms.userForm.elements.usersEmail,
   usersList: document.querySelector('.usersList'),
+  tasksList: document.querySelector('.tasksList'),
 
   taskForm: document.forms.taskForm,
   taskPerformer: document.forms.taskForm.elements.taskPerformer,
@@ -49,3 +51,9 @@ const onHandleDelete = e => {
 refs.userForm.addEventListener('input', onHandleChange);
 refs.userForm.addEventListener('submit', onHandleSubmit);
 refs.usersList.addEventListener('click', onHandleDelete);
+
+refs.taskForm.addEventListener('change', task.onHandleChange);
+refs.taskForm.addEventListener('submit', task.onHandleSubmit);
+refs.tasksList.addEventListener('click', task.onHandleDelete);
+
+

@@ -5,6 +5,11 @@ export const data = {
       userName: '',
       userEmail: '',
     },
-    // usersEmailList: [],
+    taskItems: [],
+    task: {
+      taskName: '',
+      difficultyLevel: '',
+      taskPerformer: '',
+    }
   },
 };
